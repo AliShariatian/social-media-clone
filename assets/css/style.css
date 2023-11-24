@@ -13,6 +13,9 @@
     --color-dark: #241e38;
     --color-black: #151221;
 
+    /* Create post Shadow effect */
+    --gradient-shadow: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+
     /* Border radiuses */
     --border-radius: 2rem;
     --card-border-radius: 1rem;
@@ -195,8 +198,6 @@ main .container .left-side {
     -moz-border-radius: var(--card-border-radius);
     -ms-border-radius: var(--card-border-radius);
     -o-border-radius: var(--card-border-radius);
-
-    /* overflow: hidden; */
 }
 
 .left-side .sidebar .menu-item {
@@ -325,7 +326,7 @@ main .container .left-side {
 
 /* Stories */
 
-main{
+main {
     margin-bottom: 7rem;
 }
 
@@ -430,8 +431,45 @@ main{
     margin-right: 1rem;
 }
 
-.middle-side .create-post {
-    border: 1px solid var(--color-primary);
+.middle-side .border-color {
+    box-shadow: 0 0 0 1px var(--color-primary);
+}
+
+/* Gradient Shadow effect */
+.shadow {
+    position: relative;
+}
+.shadow:before,
+.shadow:after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background: var(--gradient-shadow);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    border-radius: var(--border-radius);
+    animation: animate 50s linear infinite;
+    -webkit-animation: animate 50s linear infinite;
+}
+
+.shadow:after {
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 300% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
 }
 
 /* Feeds */
