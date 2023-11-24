@@ -386,9 +386,19 @@ main .container .left-side {
 .middle-side .stories .profile-photo {
     width: 2rem;
     height: 2rem;
-    align-self: flex-start;
     border: 2px solid var(--color-primary);
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+    margin-top: -10%;
+    margin-left: -60%;
+    padding: 0.1rem;
+}
+
+.middle-side .stories .profile-photo img {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 /* Create post */
@@ -414,4 +424,114 @@ main .container .left-side {
     background-color: transparent;
     color: var(--color-dark);
     margin-right: 1rem;
+}
+
+/* Feeds */
+
+.feeds .feed {
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    margin: 1rem 0;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    border-radius: var(--card-border-radius);
+    -webkit-border-radius: var(--card-border-radius);
+    -moz-border-radius: var(--card-border-radius);
+    -ms-border-radius: var(--card-border-radius);
+    -o-border-radius: var(--card-border-radius);
+}
+
+.feed .post-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feed .post-head .edit-post {
+    cursor: pointer;
+}
+
+.feed .post-user {
+    display: flex;
+    column-gap: 1rem;
+}
+
+.feed .post-photo {
+    margin: 0.7rem 0;
+    overflow: hidden;
+    border-radius: var(--card-border-radius);
+    -webkit-border-radius: var(--card-border-radius);
+    -moz-border-radius: var(--card-border-radius);
+    -ms-border-radius: var(--card-border-radius);
+    -o-border-radius: var(--card-border-radius);
+}
+.feed .post-photo img {
+    width: 100%;
+}
+
+.feed .action-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+    margin: 0.6rem;
+    cursor: default;
+    user-select: none;
+}
+
+.feed .action-button * *::before {
+    cursor: pointer;
+    transition: scale 100ms ease;
+    -webkit-transition: scale 100ms ease;
+    -moz-transition: scale 100ms ease;
+    -ms-transition: scale 100ms ease;
+    -o-transition: scale 100ms ease;
+}
+
+.feed .action-button * *:hover::before {
+    scale: 1.2;
+}
+
+.like-btn i::before {
+    color: red;
+}
+
+.feed .interaction-buttons {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.feed .liked-by {
+    display: flex;
+}
+
+.feed .liked-by span {
+    width: 1.4rem;
+    height: 1.4rem;
+    display: block;
+    border: 2px solid var(--color-white);
+    margin-left: -0.6rem;
+    overflow: hidden;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.feed .liked-by span:first-child {
+    margin-left: 0;
+}
+
+.feed .liked-by p {
+    margin-left: 0.5rem;
+}
+
+.feed .hashtag {
+    margin: 0 0.4rem;
+}
+
+.hashtag {
+    color: var(--color-primary);
+    cursor: pointer;
 }
