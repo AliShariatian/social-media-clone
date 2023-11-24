@@ -147,3 +147,172 @@ nav .create {
     align-items: center;
     column-gap: 2rem;
 }
+
+/* Main */
+main {
+    position: relative;
+    top: 5.4rem;
+}
+
+main .container {
+    display: grid;
+    grid-template-columns: 18vw auto 20vw;
+    column-gap: 2rem;
+    position: relative;
+}
+
+/* Left side */
+main .container .left-side {
+    height: max-content;
+    position: sticky;
+    top: var(--sticky-top-left);
+}
+
+.left-side .profile {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    width: 100%;
+    padding: var(--card-padding);
+    background-color: var(--color-white);
+    border-radius: var(--card-border-radius);
+    -webkit-border-radius: var(--card-border-radius);
+    -moz-border-radius: var(--card-border-radius);
+    -ms-border-radius: var(--card-border-radius);
+    -o-border-radius: var(--card-border-radius);
+}
+
+/* Sidebar */
+.left-side .sidebar {
+    margin-top: 1rem;
+    background-color: var(--color-white);
+    border-radius: var(--card-border-radius);
+    -webkit-border-radius: var(--card-border-radius);
+    -moz-border-radius: var(--card-border-radius);
+    -ms-border-radius: var(--card-border-radius);
+    -o-border-radius: var(--card-border-radius);
+
+    /* overflow: hidden; */
+}
+
+.left-side .sidebar .menu-item {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 300ms ease;
+    -webkit-transition: background-color 300ms ease;
+    -moz-transition: background-color 300ms ease;
+    -ms-transition: background-color 300ms ease;
+    -o-transition: background-color 300ms ease;
+}
+
+.left-side .sidebar .menu-item:hover {
+    background-color: var(--color-light);
+}
+
+.left-side .sidebar i {
+    font-size: 1.4rem;
+    color: var(--color-gray);
+    margin-left: 2rem;
+    position: relative;
+}
+
+.left-side .sidebar i .notification-count {
+    background-color: var(--color-danger);
+    color: var(--color-white);
+    font-size: 0.7rem;
+    width: fit-content;
+    padding: 0.1rem 0.4rem;
+    position: absolute;
+    top: -0.3rem;
+    right: -0.5rem;
+    border-radius: 0.8rem;
+    -webkit-border-radius: 0.8rem;
+    -moz-border-radius: 0.8rem;
+    -ms-border-radius: 0.8rem;
+    -o-border-radius: 0.8rem;
+}
+
+.left-side .sidebar h3 {
+    margin-left: 1rem;
+    font-size: 1rem;
+}
+
+.left-side .sidebar .active {
+    background-color: var(--color-light);
+}
+
+.left-side .sidebar .active :is(i, h3) {
+    color: var(--color-primary);
+}
+
+.left-side .sidebar .active::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0.5rem;
+    height: 100%;
+    background-color: var(--color-primary);
+}
+
+.left-side .sidebar .menu-item:first-child.active {
+    border-top-left-radius: var(--card-border-radius);
+    overflow: hidden;
+}
+
+.left-side .sidebar .menu-item:last-child.active {
+    border-bottom-left-radius: var(--card-border-radius);
+    overflow: hidden;
+}
+
+.left-side .btn {
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Notfications popup */
+
+.left-side .notifications-popup {
+    position: absolute;
+    top: 0;
+    left: 110%;
+    width: 30rem;
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    box-shadow: 0 0 2rem var(--color-primary);
+    z-index: 8;
+    border-radius: var(--card-border-radius);
+    -webkit-border-radius: var(--card-border-radius);
+    -moz-border-radius: var(--card-border-radius);
+    -ms-border-radius: var(--card-border-radius);
+    -o-border-radius: var(--card-border-radius);
+
+    display: none;
+}
+
+.left-side .notifications-popup::before {
+    content: "";
+    display: block;
+    width: 1.3rem;
+    height: 1.3rem;
+    background-color: var(--color-white);
+    position: absolute;
+    top: 1.4rem;
+    left: -0.6rem;
+    rotate: 45deg;
+}
+
+.left-side .notifications-popup > div{
+    display: flex;
+    align-items: start;
+    column-gap: 1rem;
+    margin-top: 1rem;
+}
+
+.left-side .notifications-popup small{
+    display: block;
+}
