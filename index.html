@@ -13,7 +13,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
     </head>
     <body>
-        <!-- Navbar -->
+        <!-- Navbar container -->
         <nav>
             <div class="container">
                 <h2 class="logo">Social Media</h2>
@@ -30,8 +30,133 @@
             </div>
         </nav>
 
-        <!-- Main -->
-        <main></main>
+        <!-- Main container -->
+        <main>
+            <div class="container">
+                <!-- Left side -->
+                <div class="left-side">
+                    <a class="profile" href="#">
+                        <div class="profile-photo">
+                            <img src="./assets/img/profile-1.jpg" alt="profile-photo" />
+                        </div>
+                        <div class="handle">
+                            <h4>Diana Ayi</h4>
+                            <p class="text-muted">@dayi</p>
+                        </div>
+                    </a>
+                    <!-- Sidebar -->
+                    <div class="sidebar">
+                        <a class="menu-item active">
+                            <span><i class="uil uil-estate"></i></span>
+                            <h3>Home</h3>
+                        </a>
+                        <a class="menu-item"
+                            ><span><i class="uil uil-compass"></i></span>
+                            <h3>Explore</h3></a
+                        >
+                        <a class="menu-item" id="notification">
+                            <span
+                                ><i class="uil uil-bell"><small class="notification-count">9+</small></i></span
+                            >
+                            <h3>Notifications</h3>
+                            <!-- Notfications popup -->
+                            <div class="notifications-popup">
+                                <div>
+                                    <div class="profile-photo">
+                                        <img src="./assets/img/profile-4.jpg" />
+                                    </div>
+                                    <div class="notification-body">
+                                        <b>Mary Gol</b> and <b>281 others</b> liked your post
+                                        <small class="text-muted">4 MINUTES AGO</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="profile-photo">
+                                        <img src="./assets/img/profile-3.jpg" />
+                                    </div>
+                                    <div class="notification-body">
+                                        <b>Anna O</b>
+                                        commented on your post
+                                        <small class="text-muted">1 HOUR AGO</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="profile-photo">
+                                        <img src="./assets/img/profile-6.jpg" />
+                                    </div>
+                                    <div class="notification-body">
+                                        <b>Josef Breuer</b>
+                                        commented on a post you are tagged in
+                                        <small class="text-muted">6 HOUR AGO</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="profile-photo">
+                                        <img src="./assets/img/profile-2.jpg" />
+                                    </div>
+                                    <div class="notification-body">
+                                        <b>Sigmund Freud</b>
+                                        accepted your friend request
+                                        <small class="text-muted">2 DAYS AGO</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="profile-photo">
+                                        <img src="./assets/img/profile-5.jpg" />
+                                    </div>
+                                    <div class="notification-body">
+                                        <b>Franz Kafka</b>
+                                        commented on a post you are tagged in
+                                        <small class="text-muted">2 DAYS AGO</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="profile-photo">
+                                        <img src="./assets/img/profile-7.jpg" />
+                                    </div>
+                                    <div class="notification-body">
+                                        <b>Friedrich Nietzsche</b>
+                                        commented on your post
+                                        <small class="text-muted">3 DAYS AGO</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End of Notfications popup -->
+                        </a>
+                        <a class="menu-item" id="message-notifications">
+                            <span
+                                ><i class="uil uil-envelope"><small class="notification-count">6</small></i></span
+                            >
+                            <h3>Messages</h3>
+                        </a>
+                        <a class="menu-item">
+                            <span><i class="uil uil-bookmark"></i></span>
+                            <h3>Bookmarks</h3>
+                        </a>
+                        <a class="menu-item">
+                            <span><i class="uil uil-chart-line"></i></span>
+                            <h3>Analytics</h3>
+                        </a>
+                        <a class="menu-item">
+                            <span><i class="uil uil-palette"></i></span>
+                            <h3>Theme</h3>
+                        </a>
+                        <a class="menu-item">
+                            <span><i class="uil uil-setting"></i></span>
+                            <h3>Settings</h3>
+                        </a>
+                    </div>
+                    <!-- End of Sidebar -->
+
+                    <label for="create-post" class="btn btn-primary">Create Post</label>
+                </div>
+
+                <!-- Middle side -->
+                <div class="middle-side"></div>
+                <!-- Right side -->
+                <div class="right-side"></div>
+            </div>
+        </main>
 
         <!-- Script -->
         <script src="assets/js/script.js"></script>
