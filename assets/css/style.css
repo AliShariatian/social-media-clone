@@ -45,10 +45,14 @@ img {
 }
 
 body {
-    font-family: var(--font-family);
     color: var(--color-dark);
     background-color: var(--color-light);
     overflow-x: hidden;
+}
+
+body,
+input {
+    font-family: var(--font-family);
 }
 
 /* Utilities */
@@ -379,11 +383,35 @@ main .container .left-side {
     background: url("../img/story-6.jpg") no-repeat center center/cover;
 }
 
-.middle-side .stories .profile-photo{
+.middle-side .stories .profile-photo {
     width: 2rem;
     height: 2rem;
     align-self: flex-start;
     border: 2px solid var(--color-primary);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
 }
 
+/* Create post */
+.middle-side .create-post {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    background-color: var(--color-white);
+    padding: 0.4rem var(--card-padding);
+    border-radius: var(--border-radius);
+    -webkit-border-radius: var(--border-radius);
+    -moz-border-radius: var(--border-radius);
+    -ms-border-radius: var(--border-radius);
+    -o-border-radius: var(--border-radius);
+}
+
+.middle-side .create-post input[type="text"] {
+    justify-self: start;
+    width: 100%;
+    padding-left: 1rem;
+    background-color: transparent;
+    color: var(--color-dark);
+    margin-right: 1rem;
+}
