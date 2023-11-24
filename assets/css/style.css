@@ -325,6 +325,10 @@ main .container .left-side {
 
 /* Stories */
 
+main{
+    margin-bottom: 7rem;
+}
+
 .middle-side .stories {
     display: flex;
     justify-content: space-between;
@@ -384,11 +388,11 @@ main .container .left-side {
 }
 
 .middle-side .stories .profile-photo {
-    width: 2rem;
-    height: 2rem;
-    border: 2px solid var(--color-primary);
+    width: 2.2rem;
+    height: 2.2rem;
+    border: 3px solid var(--color-primary);
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
-    margin-top: -10%;
+    margin-top: -15%;
     margin-left: -60%;
     padding: 0.1rem;
 }
@@ -424,6 +428,10 @@ main .container .left-side {
     background-color: transparent;
     color: var(--color-dark);
     margin-right: 1rem;
+}
+
+.middle-side .create-post {
+    border: 1px solid var(--color-primary);
 }
 
 /* Feeds */
