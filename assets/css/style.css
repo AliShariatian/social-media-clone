@@ -306,13 +306,84 @@ main .container .left-side {
     rotate: 45deg;
 }
 
-.left-side .notifications-popup > div{
+.left-side .notifications-popup > div {
     display: flex;
     align-items: start;
     column-gap: 1rem;
     margin-top: 1rem;
 }
 
-.left-side .notifications-popup small{
+.left-side .notifications-popup small {
     display: block;
 }
+
+/* Middle side */
+
+/* Stories */
+
+.middle-side .stories {
+    display: flex;
+    justify-content: space-between;
+    height: 12rem;
+    column-gap: 0.5rem;
+}
+
+.middle-side .stories .story {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-white);
+    font-size: 0.75rem;
+    width: 100%;
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    -webkit-border-radius: var(--card-border-radius);
+    -moz-border-radius: var(--card-border-radius);
+    -ms-border-radius: var(--card-border-radius);
+    -o-border-radius: var(--card-border-radius);
+    position: relative;
+    overflow: hidden;
+}
+
+.middle-side .stories .story::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5rem;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+}
+
+.middle-side .stories .story .name {
+    z-index: 2;
+}
+
+.middle-side .stories .story:nth-child(1) {
+    background: url("../img/story-1.jpg") no-repeat center center/cover;
+}
+.middle-side .stories .story:nth-child(2) {
+    background: url("../img/story-2.jpg") no-repeat center center/cover;
+}
+.middle-side .stories .story:nth-child(3) {
+    background: url("../img/story-3.jpg") no-repeat center center/cover;
+}
+.middle-side .stories .story:nth-child(4) {
+    background: url("../img/story-4.jpg") no-repeat center center/cover;
+}
+.middle-side .stories .story:nth-child(5) {
+    background: url("../img/story-5.jpg") no-repeat center center/cover;
+}
+.middle-side .stories .story:nth-child(6) {
+    background: url("../img/story-6.jpg") no-repeat center center/cover;
+}
+
+.middle-side .stories .profile-photo{
+    width: 2rem;
+    height: 2rem;
+    align-self: flex-start;
+    border: 2px solid var(--color-primary);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
