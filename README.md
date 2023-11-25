@@ -9,7 +9,7 @@ you can change Font size, buttons color and Background color
 Pure `HTML`, `CSS`, `JavaScript`.
 
 ## Demo
-![Socail Medai](./web-demo.jpg "Social Media").
+![Socail Medai](./web-demo.jpg "Social Media")
 
 
 ## 🚀 About Me
