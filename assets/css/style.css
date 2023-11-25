@@ -890,7 +890,7 @@ main {
     }
 
     .customize-theme .card {
-        width: 100vw;
+        width: 90vw;
     }
 
     .customize-theme .background .choose-bg {
@@ -943,6 +943,10 @@ main {
     .customize-theme .background .choose-bg {
         flex-direction: column;
         row-gap: .5rem;
+    }
+
+    .customize-theme .card {
+        width: 100vw;
     }
 
    

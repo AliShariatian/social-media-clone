@@ -1,9 +1,25 @@
+// Input create post
 const createPostInput = document.getElementById("create-post");
 const createPostContainer = document.getElementById("create-post-container");
 
+// Notification
 const menuItems = document.querySelectorAll(".menu-item");
 const notificationsPopup = document.querySelector(".notifications-popup");
 const noticicationsCount = document.querySelector("#notification .notification-count");
+
+// Message
+const messageNotification = document.querySelector("#message-notifications");
+const messagesBox = document.querySelector(".messages");
+const messageCount = document.querySelector("#message-notifications .notification-count");
+const allMessages = document.querySelectorAll(".message");
+const messageSearch = document.getElementById("search-message");
+
+// Theme
+const theme = document.getElementById("theme");
+const themeBox = document.querySelector(".customize-theme");
+const closeBoxBtn = document.querySelector("#close");
+
+// -----------------------------------------------------------
 
 // Input create post box shadow effect
 createPostInput.addEventListener("focusin", () => {
@@ -16,7 +32,6 @@ createPostInput.addEventListener("focusout", () => {
     createPostContainer.classList.remove("shadow");
 });
 
-// Sidebar
 // remove active class from all menu items
 const changeActiveItem = () => {
     menuItems.forEach((item) => {
@@ -24,6 +39,7 @@ const changeActiveItem = () => {
     });
 };
 
+// show notification box
 menuItems.forEach((item) => {
     item.addEventListener("click", () => {
         changeActiveItem();
@@ -37,3 +53,42 @@ menuItems.forEach((item) => {
         }
     });
 });
+
+// Message box hilight when message item clicked
+messageNotification.addEventListener("click", () => {
+    messagesBox.style.boxShadow = "0 0 1rem var(--color-primary)";
+    messageCount.style.display = "none";
+    setTimeout(() => {
+        messagesBox.style.boxShadow = "none";
+    }, 2000);
+});
+
+// Search messages
+messageSearch.addEventListener("keyup", () => {
+    const value = messageSearch.value.toLowerCase();
+
+    allMessages.forEach((user) => {
+        let name = user.querySelector("h5").textContent.toLowerCase();
+
+        if (name.indexOf(value) != -1) {
+            user.style.display = "flex";
+        } else {
+            user.style.display = "none";
+        }
+    });
+});
+
+// open theme box
+theme.addEventListener("click", () => {
+    themeBox.style.display = "grid";
+});
+
+// close theme box
+const closeThemeBox = (ev) => {
+    if (ev.target.classList.contains("customize-theme") || ev.target.classList.contains("close")) {
+        themeBox.style.display = "none";
+    }
+};
+
+themeBox.addEventListener("click", closeThemeBox);
+closeBoxBtn.addEventListener("click", closeThemeBox);
