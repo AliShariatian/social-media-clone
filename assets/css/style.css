@@ -3,15 +3,15 @@
     --font-family: "Poppins", sans-serif;
 
     /* Colors */
-    --color-white: #fff;
-    --color-light: #f0eef6;
-    --color-gray: #9e98b3;
-    --color-primary: #6b4ce6;
-    --color-secondary: #d6ccff;
-    --color-success: #51fb51;
-    --color-danger: #fb5151;
-    --color-dark: #241e38;
-    --color-black: #151221;
+    --color-white: hsl(0, 0%, 100%);
+    --color-light: hsl(255, 31%, 95%);
+    --color-gray: hsl(253, 15%, 65%);
+    --color-primary: hsl(252, 75%, 60%);
+    --color-secondary: hsl(252, 100%, 90%);
+    --color-success: hsl(120, 96%, 65%);
+    --color-danger: hsl(0, 96%, 65%);
+    --color-dark: hsl(254, 30%, 17%);
+    --color-black: hsl(252, 29%, 10%);
 
     /* Create post Shadow effect */
     --gradient-shadow: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
@@ -689,11 +689,165 @@ main {
 
 .friend-requests .request .info {
     display: flex;
+    align-items: flex-start;
     column-gap: 1rem;
     margin-bottom: 1rem;
 }
 
 .friend-requests .request .action {
     display: flex;
-    column-gap: 1rem;
+    justify-content: space-around;
+}
+
+/* Costumize theme box */
+.customize-theme {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    font-size: 0.9rem;
+
+    /* display: none; */
+}
+
+.customize-theme .card {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    padding: 3rem;
+    width: 50%;
+}
+
+.customize-theme .font-size {
+    margin-top: 5rem;
+}
+
+.customize-theme .font-size > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-light);
+    padding: var(--search-padding);
+    border-radius: var(--card-border-radius);
+}
+
+.customize-theme .choose-size {
+    background-color: var(--color-secondary);
+    width: 100%;
+    height: 0.3rem;
+    margin: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.customize-theme .choose-size span {
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--color-secondary);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.customize-theme .choose-size span.active {
+    background-color: var(--color-primary);
+}
+
+.customize-theme .color {
+    margin-top: 2rem;
+}
+
+.customize-theme h4 {
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 0.6rem;
+}
+
+.customize-theme .choose-color {
+    background-color: var(--color-light);
+    padding: var(--search-padding);
+    border-radius: var(--card-border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.customize-theme .choose-color span {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+}
+
+.customize-theme .choose-color span:nth-child(1) {
+    background-color: hsl(252, 75%, 60%);
+}
+.customize-theme .choose-color span:nth-child(2) {
+    background-color: hsl(52, 75%, 60%);
+}
+.customize-theme .choose-color span:nth-child(3) {
+    background-color: hsl(352, 75%, 60%);
+}
+.customize-theme .choose-color span:nth-child(4) {
+    background-color: hsl(152, 75%, 60%);
+}
+.customize-theme .choose-color span:nth-child(5) {
+    background-color: hsl(202, 75%, 60%);
+}
+
+.customize-theme .choose-color span.active {
+    border: 5px solid white;
+}
+
+.customize-theme .background {
+    margin-top: 2rem;
+}
+
+.customize-theme .background .choose-bg {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 1.5rem;
+}
+
+.customize-theme .background .choose-bg > div {
+    padding: var(--card-padding);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+
+.customize-theme .background .choose-bg > div.active {
+    border: 2px solid var(--color-primary);
+}
+
+.customize-theme .background .choose-bg .bg-1 {
+    background-color: #fff;
+    color: #000;
+}
+
+.customize-theme .background .choose-bg .bg-2 {
+    background-color: hsl(252, 30%, 17%);
+    color: #fff;
+}
+
+.customize-theme .background .choose-bg .bg-3 {
+    background-color: hsl(252, 30%, 10%);
+    color: #fff;
+}
+
+.customize-theme .choose-bg > div span {
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid var(--color-gray);
+    border-radius: 50%;
+    margin-right: 1rem;
 }
