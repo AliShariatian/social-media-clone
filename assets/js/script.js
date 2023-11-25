@@ -22,8 +22,13 @@ const closeBoxBtn = document.querySelector("#close");
 // Font size
 const fontSizesElem = document.querySelectorAll(".choose-size span");
 // Color palette
-const colorPaletteElem = document.querySelectorAll('.choose-color span')
-const root = document.querySelector(':root')
+const colorPaletteElem = document.querySelectorAll(".choose-color span");
+const root = document.querySelector(":root");
+
+// Background color
+const bg1 = document.querySelector(".bg-1");
+const bg2 = document.querySelector(".bg-2");
+const bg3 = document.querySelector(".bg-3");
 // -----------------------------------------------------------
 
 // Input create post box shadow effect
@@ -131,9 +136,8 @@ fontSizesElem.forEach((size) => {
 });
 
 // Change primary color
-colorPaletteElem.forEach(color => {
-    color.addEventListener('click',()=>{
-        
+colorPaletteElem.forEach((color) => {
+    color.addEventListener("click", () => {
         removeActiveSelector(colorPaletteElem);
         let primaryHue;
         color.classList.add("active");
@@ -150,6 +154,59 @@ colorPaletteElem.forEach(color => {
             primaryHue = 202;
         }
 
-root.style.setProperty('--primary-color-hue', primaryHue)
-    })
-})
+        root.style.setProperty("--primary-color-hue", primaryHue);
+    });
+});
+
+// Backgroun color
+let darkColorLightness;
+let lightColorLihtness;
+let whiteColorLightness;
+
+const changeBG = () => {
+    root.style.setProperty("--dark-color-lightness", darkColorLightness);
+    root.style.setProperty("--light-color-lihtness", lightColorLihtness);
+    root.style.setProperty("--white-color-lightness", whiteColorLightness);
+};
+
+bg1.addEventListener("click", () => {
+    darkColorLightness = "17%";
+    whiteColorLightness = "100%";
+    lightColorLihtness = "95%";
+
+    // add active class
+    bg1.classList.add("active");
+
+    // remove active class from the others
+    bg2.classList.remove("active");
+    bg3.classList.remove("active");
+    changeBG();
+});
+
+bg2.addEventListener("click", () => {
+    darkColorLightness = "95%";
+    whiteColorLightness = "20%";
+    lightColorLihtness = "15%";
+
+    // add active class
+    bg2.classList.add("active");
+
+    // remove active class from the others
+    bg1.classList.remove("active");
+    bg3.classList.remove("active");
+    changeBG();
+});
+
+bg3.addEventListener("click", () => {
+    darkColorLightness = "95%";
+    whiteColorLightness = "10%";
+    lightColorLihtness = "0%";
+
+    // add active class
+    bg3.classList.add("active");
+
+    // remove active class from the others
+    bg1.classList.remove("active");
+    bg2.classList.remove("active");
+    changeBG();
+});

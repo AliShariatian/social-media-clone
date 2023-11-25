@@ -4,16 +4,19 @@
 
     /* Colors */
     --primary-color-hue: 252;
+    --dark-color-lightness: 17%;
+    --light-color-lihtness: 95%;
+    --white-color-lightness: 100%;
 
-    --color-white: hsl(0, 0%, 100%);
-    --color-light: hsl(255, 31%, 95%);
-    --color-gray: hsl(253, 15%, 65%);
+    --color-white: hsl(252, 30%, var(--white-color-lightness));
+    --color-light: hsl(252, 30%, var(--light-color-lihtness));
+    --color-gray: hsl(var(--primary-color-hue), 15%, 65%);
     --color-primary: hsl(var(--primary-color-hue), 75%, 60%);
     --color-secondary: hsl(252, 100%, 90%);
     --color-success: hsl(120, 96%, 65%);
     --color-danger: hsl(0, 96%, 65%);
-    --color-dark: hsl(254, 30%, 17%);
-    --color-black: hsl(252, 29%, 10%);
+    --color-dark: hsl(252, 30%, var(--dark-color-lightness));
+    --color-black: hsl(252, 30%, 10%);
 
     /* Create post Shadow effect */
     --gradient-shadow: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
@@ -842,7 +845,7 @@ main {
 }
 
 .customize-theme .background .choose-bg > div.active {
-    border: 2px solid var(--color-primary);
+    box-shadow: 0 0 0 2px var(--color-primary);
 }
 
 .customize-theme .background .choose-bg .bg-1 {
