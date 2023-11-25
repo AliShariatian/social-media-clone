@@ -111,6 +111,28 @@ input {
     overflow: hidden;
 }
 
+.search-bar {
+    background-color: var(--color-light);
+    border-radius: var(--border-radius);
+    -webkit-border-radius: var(--border-radius);
+    -moz-border-radius: var(--border-radius);
+    -ms-border-radius: var(--border-radius);
+    -o-border-radius: var(--border-radius);
+    padding: var(--search-padding);
+}
+
+.search-bar input[type="search"] {
+    background-color: transparent;
+    color: var(--color-dark);
+    width: 30vw;
+    margin-left: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.search-bar input[type="search"]::placeholder {
+    color: var(--color-gray);
+}
+
 /* Navbar */
 nav {
     width: 100%;
@@ -125,28 +147,6 @@ nav .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-nav .searchBar {
-    background-color: var(--color-light);
-    border-radius: var(--border-radius);
-    -webkit-border-radius: var(--border-radius);
-    -moz-border-radius: var(--border-radius);
-    -ms-border-radius: var(--border-radius);
-    -o-border-radius: var(--border-radius);
-    padding: var(--search-padding);
-}
-
-nav .searchBar input[type="search"] {
-    background-color: transparent;
-    color: var(--color-dark);
-    width: 30vw;
-    margin-left: 0.5rem;
-    font-size: 0.9rem;
-}
-
-nav .searchBar input[type="search"]::placeholder {
-    color: var(--color-gray);
 }
 
 nav .create {
@@ -581,3 +581,92 @@ main {
     color: var(--color-primary);
     cursor: pointer;
 }
+
+/* Right side */
+.right-side {
+    height: max-content;
+    position: sticky;
+    top: var(--sticky-top-right);
+    bottom: 0;
+}
+
+.right-side .messages {
+    background-color: var(--color-white);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+}
+
+.right-side .messages .heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.right-side .messages .heading i {
+    font-size: 1.4rem;
+}
+
+.right-side .messages .search-bar {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.right-side .messages .category {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.right-side .messages .category h6 {
+    width: 100%;
+    text-align: center;
+    border-bottom: 3px solid var(--color-light);
+    padding-bottom: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.right-side .messages .category .active {
+    border-color: var(--color-dark);
+}
+
+.messages .message-requests {
+    color: var(--color-primary);
+}
+
+.right-side .messages .message {
+    display: flex;
+    column-gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.right-side .messages .message:last-child {
+    margin-bottom: 0;
+}
+
+.right-side .messages .message p {
+    font-size: 0.8rem;
+}
+
+.messages .message .profile-photo {
+    position: relative;
+    overflow: visible;
+}
+
+.messages .message .profile-photo img {
+    border-radius: 50%;
+}
+
+.messages .message .profile-photo .active {
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    border: 3px solid var(--color-white);
+    background-color: var(--color-success);
+    bottom: 0;
+    right: 0;
+}
+
+/*  */
