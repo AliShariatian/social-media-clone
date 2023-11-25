@@ -927,6 +927,6 @@ main {
         display: block;
         position: absolute;
         top: 1.3rem;
-        left: calc(20rem - 0.6rem);
+        left: calc(20rem - 0.7rem);
     }
 }
