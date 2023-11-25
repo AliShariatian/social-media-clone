@@ -6,7 +6,7 @@ A social media similar to Facebook website
 
 you can change Font size, buttons color and Background color
 ## 🛠 Skills used in this project:
-Pure `HTML`, `CSS`, `JavaScript`.
+Pure `HTML`, `CSS` and `JavaScript`.
 
 ## Demo
 ![Socail Media](./web-demo.jpg "Social Media")
