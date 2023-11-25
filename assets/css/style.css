@@ -941,11 +941,10 @@ main {
 
     main .container .left-side {
         grid-column: 3/4;
-
         position: fixed;
         bottom: 0;
         right: 0;
-        display: none;
+        /* display: none; */
     }
     .left-side .sidebar {
         box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
