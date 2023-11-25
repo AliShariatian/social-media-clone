@@ -722,6 +722,16 @@ main {
     padding: 3rem;
     width: 50%;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.customize-theme .card .close{
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    color: var(--color-gray);
+    font-size: 1.4rem;
+    cursor: pointer;
 }
 
 .customize-theme .font-size {
