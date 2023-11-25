@@ -1,7 +1,7 @@
 
 # Social media website
 
-A social media like facebook website
+A social media similar to Facebook website
 ## 🕹 Features
 
 you can change Font size, buttons color and Background color
