@@ -289,7 +289,7 @@ main .container .left-side {
     width: 30rem;
     background-color: var(--color-white);
     padding: var(--card-padding);
-    box-shadow: 0 0 2rem var(--color-primary);
+    box-shadow: 0 0 1rem var(--color-primary);
     z-index: 8;
     border-radius: var(--card-border-radius);
     -webkit-border-radius: var(--card-border-radius);
@@ -595,6 +595,7 @@ main {
     background-color: var(--color-white);
     border-radius: var(--card-border-radius);
     padding: var(--card-padding);
+    transition: box-shadow 300ms cubic-bezier(0.31, 1.57, 0, 0.97);
 }
 
 .right-side .messages .heading {
@@ -885,6 +886,14 @@ main {
 
     .left-side .sidebar i {
         margin-left: 1.7rem;
+    }
+
+    .customize-theme .card {
+        width: 90vw;
+    }
+
+    .customize-theme .background .choose-bg {
+        column-gap: 0.7rem;
     }
 }
 
