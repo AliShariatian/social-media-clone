@@ -67,6 +67,7 @@ input {
 
 .btn {
     display: inline-block;
+    background-color: var(--color-light);
     padding: var(--btn-padding);
     font-weight: 500;
     border-radius: var(--border-radius);
@@ -669,4 +670,30 @@ main {
     right: 0;
 }
 
-/*  */
+/* Friend requests */
+.right-side .friend-requests {
+    margin-top: 1rem;
+}
+
+.right-side .friend-requests h4 {
+    color: var(--color-gray);
+    margin: 1rem 0;
+}
+
+.right-side .friend-requests .request {
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--border-radius);
+    margin-bottom: 0.7rem;
+}
+
+.friend-requests .request .info {
+    display: flex;
+    column-gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.friend-requests .request .action {
+    display: flex;
+    column-gap: 1rem;
+}
