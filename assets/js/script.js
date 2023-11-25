@@ -21,6 +21,9 @@ const closeBoxBtn = document.querySelector("#close");
 
 // Font size
 const fontSizesElem = document.querySelectorAll(".choose-size span");
+// Color palette
+const colorPaletteElem = document.querySelectorAll('.choose-color span')
+const root = document.querySelector(':root')
 // -----------------------------------------------------------
 
 // Input create post box shadow effect
@@ -95,16 +98,17 @@ const closeThemeBox = (ev) => {
 themeBox.addEventListener("click", closeThemeBox);
 closeBoxBtn.addEventListener("click", closeThemeBox);
 
-// Change font size
-const removeSizeSelector = () => {
-    fontSizesElem.forEach((size) => {
-        size.classList.remove("active");
+// Remove active class handler
+const removeActiveSelector = (parentElem) => {
+    parentElem.forEach((elem) => {
+        elem.classList.remove("active");
     });
 };
 
+// Change font size
 fontSizesElem.forEach((size) => {
     size.addEventListener("click", () => {
-        removeSizeSelector();
+        removeActiveSelector(fontSizesElem);
         let fontSize;
         size.classList.add("active");
 
@@ -120,8 +124,32 @@ fontSizesElem.forEach((size) => {
             fontSize = "22px";
         }
 
-        // change root and create post input font size
+        // change root and createPostInput element font size
         document.querySelector("html").style.fontSize = fontSize;
         createPostInput.style.fontSize = fontSize;
     });
 });
+
+// Change primary color
+colorPaletteElem.forEach(color => {
+    color.addEventListener('click',()=>{
+        
+        removeActiveSelector(colorPaletteElem);
+        let primaryHue;
+        color.classList.add("active");
+
+        if (color.classList.contains("color-1")) {
+            primaryHue = 252;
+        } else if (color.classList.contains("color-2")) {
+            primaryHue = 52;
+        } else if (color.classList.contains("color-3")) {
+            primaryHue = 352;
+        } else if (color.classList.contains("color-4")) {
+            primaryHue = 152;
+        } else if (color.classList.contains("color-5")) {
+            primaryHue = 202;
+        }
+
+root.style.setProperty('--primary-color-hue', primaryHue)
+    })
+})
