@@ -19,6 +19,8 @@ const theme = document.getElementById("theme");
 const themeBox = document.querySelector(".customize-theme");
 const closeBoxBtn = document.querySelector("#close");
 
+// Font size
+const fontSizesElem = document.querySelectorAll(".choose-size span");
 // -----------------------------------------------------------
 
 // Input create post box shadow effect
@@ -92,3 +94,34 @@ const closeThemeBox = (ev) => {
 
 themeBox.addEventListener("click", closeThemeBox);
 closeBoxBtn.addEventListener("click", closeThemeBox);
+
+// Change font size
+const removeSizeSelector = () => {
+    fontSizesElem.forEach((size) => {
+        size.classList.remove("active");
+    });
+};
+
+fontSizesElem.forEach((size) => {
+    size.addEventListener("click", () => {
+        removeSizeSelector();
+        let fontSize;
+        size.classList.add("active");
+
+        if (size.classList.contains("font-size-1")) {
+            fontSize = "10px";
+        } else if (size.classList.contains("font-size-2")) {
+            fontSize = "13px";
+        } else if (size.classList.contains("font-size-3")) {
+            fontSize = "16px";
+        } else if (size.classList.contains("font-size-4")) {
+            fontSize = "19px";
+        } else if (size.classList.contains("font-size-5")) {
+            fontSize = "22px";
+        }
+
+        // change root and create post input font size
+        document.querySelector("html").style.fontSize = fontSize;
+        createPostInput.style.fontSize = fontSize;
+    });
+});
