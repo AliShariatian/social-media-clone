@@ -161,6 +161,11 @@ nav .create {
     column-gap: 1rem;
 }
 
+nav .navigation {
+    font-size: 1.4rem;
+    display: none;
+}
+
 /* Main */
 main {
     position: relative;
@@ -376,21 +381,18 @@ main {
 }
 
 .middle-side .stories .story:nth-child(1) {
-    background: url("../img/story-1.jpg") no-repeat center center/cover;
-}
-.middle-side .stories .story:nth-child(2) {
     background: url("../img/story-2.jpg") no-repeat center center/cover;
 }
-.middle-side .stories .story:nth-child(3) {
+.middle-side .stories .story:nth-child(2) {
     background: url("../img/story-3.jpg") no-repeat center center/cover;
 }
-.middle-side .stories .story:nth-child(4) {
+.middle-side .stories .story:nth-child(3) {
     background: url("../img/story-4.jpg") no-repeat center center/cover;
 }
-.middle-side .stories .story:nth-child(5) {
+.middle-side .stories .story:nth-child(4) {
     background: url("../img/story-5.jpg") no-repeat center center/cover;
 }
-.middle-side .stories .story:nth-child(6) {
+.middle-side .stories .story:nth-child(5) {
     background: url("../img/story-6.jpg") no-repeat center center/cover;
 }
 
@@ -885,6 +887,7 @@ main {
     .left-side {
         width: 5rem;
         z-index: 5;
+        display: block;
     }
 
     main .container .left-side :is(.profile, .sidebar h3, .btn) {
@@ -913,6 +916,16 @@ main {
         padding: 0 1rem;
     }
 
+    nav .navigation {
+        display: block;
+    }
+
+    nav .logo {
+        font-size: 1rem;
+        line-height: 1;
+        font-weight: bolder;
+    }
+
     main .container .right-side {
         display: none;
     }
@@ -922,15 +935,20 @@ main {
     }
 
     main .container {
-        grid-template-columns: 0 auto 5rem;
+        grid-template-columns: 0 96vw 0;
         gap: 0;
     }
 
     main .container .left-side {
         grid-column: 3/4;
+
         position: fixed;
         bottom: 0;
         right: 0;
+        display: none;
+    }
+    .left-side .sidebar {
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
     }
 
     .left-side .notifications-popup {
