@@ -153,7 +153,7 @@ nav .container {
 nav .create {
     display: flex;
     align-items: center;
-    column-gap: 2rem;
+    column-gap: 1rem;
 }
 
 /* Main */
@@ -263,12 +263,12 @@ main .container .left-side {
     background-color: var(--color-primary);
 }
 
-.left-side .sidebar .menu-item:first-child.active {
+.left-side .sidebar .menu-item:first-child {
     border-top-left-radius: var(--card-border-radius);
     overflow: hidden;
 }
 
-.left-side .sidebar .menu-item:last-child.active {
+.left-side .sidebar .menu-item:last-child {
     border-bottom-left-radius: var(--card-border-radius);
     overflow: hidden;
 }
@@ -713,7 +713,7 @@ main {
     place-items: center;
     font-size: 0.9rem;
 
-    /* display: none; */
+    display: none;
 }
 
 .customize-theme .card {
@@ -725,7 +725,7 @@ main {
     position: relative;
 }
 
-.customize-theme .card .close{
+.customize-theme .card .close {
     position: absolute;
     top: 1rem;
     right: 1.5rem;
@@ -861,4 +861,72 @@ main {
     border: 2px solid var(--color-gray);
     border-radius: 50%;
     margin-right: 1rem;
+}
+
+/* Media queries for small laptops and big tablets */
+@media only screen and (max-width: 1200px) {
+    .container {
+        width: 96%;
+    }
+
+    main .container {
+        grid-template-columns: 5rem auto 30vw;
+        column-gap: 1rem;
+    }
+
+    .left-side {
+        width: 5rem;
+        z-index: 5;
+    }
+
+    main .container .left-side :is(.profile, .sidebar h3, .btn) {
+        display: none;
+    }
+
+    .left-side .sidebar i {
+        margin-left: 1.7rem;
+    }
+}
+
+/* Media queries for small tablets and mobile phones */
+@media only screen and (max-width: 992px) {
+    nav .search-bar {
+        display: none;
+    }
+    nav .container {
+        padding: 0 1rem;
+    }
+
+    main .container .right-side {
+        display: none;
+    }
+
+    main .container .middle-side {
+        grid-column: 1/3;
+    }
+
+    main .container {
+        grid-template-columns: 0 auto 5rem;
+        gap: 0;
+    }
+
+    main .container .left-side {
+        grid-column: 3/4;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+    }
+
+    .left-side .notifications-popup {
+        position: absolute;
+        left: -20rem;
+        width: 20rem;
+    }
+
+    .left-side .notifications-popup::before {
+        display: block;
+        position: absolute;
+        top: 1.3rem;
+        left: calc(20rem - 0.6rem);
+    }
 }
