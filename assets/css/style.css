@@ -5,11 +5,11 @@
     /* Colors */
     --primary-color-hue: 252;
     --dark-color-lightness: 17%;
-    --light-color-lihtness: 95%;
+    --light-color-lightness: 95%;
     --white-color-lightness: 100%;
 
     --color-white: hsl(252, 30%, var(--white-color-lightness));
-    --color-light: hsl(252, 30%, var(--light-color-lihtness));
+    --color-light: hsl(252, 30%, var(--light-color-lightness));
     --color-gray: hsl(var(--primary-color-hue), 15%, 65%);
     --color-primary: hsl(var(--primary-color-hue), 75%, 60%);
     --color-secondary: hsl(252, 100%, 90%);
@@ -944,7 +944,7 @@ main {
         position: fixed;
         bottom: 0;
         right: 0;
-        /* display: none; */
+        display: none;
     }
     .left-side .sidebar {
         box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
